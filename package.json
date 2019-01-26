@@ -1,5 +1,5 @@
 {
-  "name": "google-tech-dev",
+  "name": "google-tech-dev-javascript",
   "version": "1.0.0",
   "description": "Google Tech Dev Guide problems",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/knightjdr/google-tech-dev.git"
+    "url": "git+https://github.com/knightjdr/google-tech-dev-javascript.git"
   },
   "author": "James Knight",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/knightjdr/google-tech-dev/issues"
+    "url": "https://github.com/knightjdr/google-tech-dev-javascript/issues"
   },
-  "homepage": "https://github.com/knightjdr/google-tech-dev#readme",
+  "homepage": "https://github.com/knightjdr/google-tech-dev-javascript#readme",
   "devDependencies": {
     "eslint": "^5.12.1",
     "jest": "^23.6.0"
