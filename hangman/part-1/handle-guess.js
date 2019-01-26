@@ -1,9 +1,5 @@
 const handleGuess = (guess, word, prevProgress) => {
-  const progress = {
-    guesses: {...prevProgress.quesses},
-    numGuesses: prevProgress.numGuesses,
-    revealed: prevProgress.revealed,
-  };
+  const progress = { ...prevProgress };
   if (
     progress.guesses.hasOwnProperty(guess)
     && progress.guesses[guess]
@@ -22,7 +18,6 @@ const handleGuess = (guess, word, prevProgress) => {
     progress.message = 'You must guess a single letter.';
   } else if (word.includes(guess)) {
     progress.message = 'That guess is correct.';
-    progress.numGuesses--;
     progress.guesses[guess] = true;
     progress.revealed = word.split('').reduce((revealed, letter, index) => {
       if (letter === guess) {

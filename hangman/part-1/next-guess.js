@@ -1,17 +1,18 @@
 /* eslint no-console: 0 */
 
-const readline = require('readline').createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
+const readline = require('readline');
 
 const nextGuess = (numGuesses, revealed) => (
   new Promise((resolve) => {
     console.log(`The word now looks like this: ${revealed}`);
-    console.log(`You have ${numGuesses} left.`);
-    readline.question('Your guess: ', (guess) => {
-      readline.close();
+    console.log(`You have ${numGuesses} guesses left.`);
+    const prompt = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout,
+    });
+    prompt.question('Your guess: ', (guess) => {
       resolve(guess.toUpperCase());
+      prompt.close();
     });
   })
 );
